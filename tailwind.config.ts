@@ -9,9 +9,34 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+      },
+      colors: {
+        primary: '#079211',
+        white: '#ffffff',
+        black: '#000000',
+        'light-gray': '#D1D5DB',
+        gray: '#808080',
+        'deep-gray': '#0A0A0F',
+        'light-dark': '#313131',
+        dark: '#101017',
+        'deep-dark': '#050507',
+      },
+      keyframes: {
+        blink: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.3' },
+        },
+        blink2: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0' },
+        },
+      },
+      animation: {
+        blink: 'blink 2s infinite',
+        blink2: 'blink 2s infinite',
       },
     },
   },

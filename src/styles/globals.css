@@ -1,33 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  @apply font-inter;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.navbar-link {
+  @apply p-3 text-zinc-300 hover:text-white hover:border hover:border-primary;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.dark-btn {
+  @apply border border-primary hover:bg-primary hover:text-white hover:border-white px-3 py-2 text-light-gray text-opacity-60
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.light-btn {
+  @apply border border-primary hover:bg-primary hover:text-opacity-70 hover:border-white px-3 py-2
+}
+
+@layer components {
+  .blink2 {
+    @apply animate-blink;
   }
 }
